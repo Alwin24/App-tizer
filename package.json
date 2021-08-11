@@ -1,7 +1,7 @@
 {
-  "name": "shopit",
+  "name": "app-tizer",
   "version": "1.0.0",
-  "description": "e-commerce website using MERN",
+  "description": "food delivery website using MERN",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
@@ -10,7 +10,7 @@
     "seeder": "node backend/utils/seeder.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
   },
-  "author": "winster",
+  "author": "Alwin Helor",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
