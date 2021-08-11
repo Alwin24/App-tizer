@@ -1,0 +1,155 @@
+[
+    {
+        "name": "Spagetti",
+        "price": "125",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, culpa. Facilis porro dignissimos vitae facere culpa distinctio cumque voluptas animi perspiciatis vel ipsam sequi, saepe inventore dolor eligendi ducimus delectus.",
+        "ratings": 4.3,
+        "images": [
+            {
+                "public_id": "items/spagetti_hzsrkw.jpg",
+                "url": "https://res.cloudinary.com/alwin24/image/upload/v1628260728/items/spagetti_hzsrkw.jpg"
+            }
+        ],
+        "cuisine": "chinese",
+        "restaurant": "Cafe 17",
+        "stock": 5,
+        "numOfReviews": 13,
+        "reviews": []
+    },
+    {
+        "name": "Sadhya Meal",
+        "price": "140",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, culpa. Facilis porro dignissimos vitae facere culpa distinctio cumque voluptas animi perspiciatis vel ipsam sequi, saepe inventore dolor eligendi ducimus delectus.",
+        "ratings": 3.5,
+        "images": [
+            {
+                "public_id": "items/Sadhya-meal_esfjhe.jpg",
+                "url": "https://res.cloudinary.com/alwin24/image/upload/v1628260679/items/Sadhya-meal_esfjhe.jpg"
+            }
+        ],
+        "cuisine": "indian",
+        "restaurant": "Panera Bread",
+        "stock": 4,
+        "numOfReviews": 23,
+        "reviews": []
+    },
+    {
+        "name": "Samosa Chutney",
+        "price": "45",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, culpa. Facilis porro dignissimos vitae facere culpa distinctio cumque voluptas animi perspiciatis vel ipsam sequi, saepe inventore dolor eligendi ducimus delectus.",
+        "ratings": 4.4,
+        "images": [
+            {
+                "public_id": "items/Samosachutney_yymhsr.jpg",
+                "url": "https://res.cloudinary.com/alwin24/image/upload/v1628260675/items/Samosachutney_yymhsr.jpg"
+            }
+        ],
+        "cuisine": "indian",
+        "restaurant": "Panera Bread",
+        "stock": 18,
+        "numOfReviews": 24,
+        "reviews": []
+    },
+    {
+        "name": "Chicken Biriyani",
+        "price": "160",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, culpa. Facilis porro dignissimos vitae facere culpa distinctio cumque voluptas animi perspiciatis vel ipsam sequi, saepe inventore dolor eligendi ducimus delectus.",
+        "ratings": 3.8,
+        "images": [
+            {
+                "public_id": "items/chicken_biriyani_stgug1.jpg",
+                "url": "https://res.cloudinary.com/alwin24/image/upload/v1628260672/items/chicken_biriyani_stgug1.jpg"
+            }
+        ],
+        "cuisine": "arabian",
+        "restaurant": "Arabian Nights",
+        "stock": 8,
+        "numOfReviews": 41,
+        "reviews": []
+    },
+    {
+        "name": "Pizza",
+        "price": "180",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, culpa. Facilis porro dignissimos vitae facere culpa distinctio cumque voluptas animi perspiciatis vel ipsam sequi, saepe inventore dolor eligendi ducimus delectus.",
+        "ratings": 4.5,
+        "images": [
+            {
+                "public_id": "items/pizza_m2wpxg.jpg",
+                "url": "https://res.cloudinary.com/alwin24/image/upload/v1628260673/items/pizza_m2wpxg.jpg"
+            }
+        ],
+        "cuisine": "mexican",
+        "restaurant": "Dominos",
+        "stock": 6,
+        "numOfReviews": 33,
+        "reviews": []
+    },
+    {
+        "name": "Alfaham Full",
+        "price": "220",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, culpa. Facilis porro dignissimos vitae facere culpa distinctio cumque voluptas animi perspiciatis vel ipsam sequi, saepe inventore dolor eligendi ducimus delectus.",
+        "ratings": 3.9,
+        "images": [
+            {
+                "public_id": "items/alfaham_cqglah.jpg",
+                "url": "https://res.cloudinary.com/alwin24/image/upload/v1628260673/items/alfaham_cqglah.jpg"
+            }
+        ],
+        "cuisine": "arabian",
+        "restaurant": "Arabian Nights",
+        "stock": 1,
+        "numOfReviews": 10,
+        "reviews": []
+    },
+    {
+        "name": "Veg Sandwitch",
+        "price": "40",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, culpa. Facilis porro dignissimos vitae facere culpa distinctio cumque voluptas animi perspiciatis vel ipsam sequi, saepe inventore dolor eligendi ducimus delectus.",
+        "ratings": 4.6,
+        "images": [
+            {
+                "public_id": "items/sandwitch_amgkyh.jpg",
+                "url": "https://res.cloudinary.com/alwin24/image/upload/v1628260672/items/sandwitch_amgkyh.jpg"
+            }
+        ],
+        "cuisine": "american",
+        "restaurant": "Dominos",
+        "stock": 4,
+        "numOfReviews": 3,
+        "reviews": []
+    },
+    {
+        "name": "Masala Dosa",
+        "price": "75",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, culpa. Facilis porro dignissimos vitae facere culpa distinctio cumque voluptas animi perspiciatis vel ipsam sequi, saepe inventore dolor eligendi ducimus delectus.",
+        "ratings": 4.2,
+        "images": [
+            {
+                "public_id": "items/dosa_hzewgq.jpg",
+                "url": "https://res.cloudinary.com/alwin24/image/upload/v1628260672/items/dosa_hzewgq.jpg"
+            }
+        ],
+        "cuisine": "indian",
+        "restaurant": "Cafe 17",
+        "stock": 0,
+        "numOfReviews": 4,
+        "reviews": []
+    },
+    {
+        "name": "Paneer Butter Masala",
+        "price": "80",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, culpa. Facilis porro dignissimos vitae facere culpa distinctio cumque voluptas animi perspiciatis vel ipsam sequi, saepe inventore dolor eligendi ducimus delectus.",
+        "ratings": 4.7,
+        "images": [
+            {
+                "public_id": "items/paneer_iroucf.jpg",
+                "url": "https://res.cloudinary.com/alwin24/image/upload/v1628260672/items/paneer_iroucf.jpg"
+            }
+        ],
+        "cuisine": "indian",
+        "restaurant": "Panera Bread",
+        "stock": 13,
+        "numOfReviews": 52,
+        "reviews": []
+    }
+]
