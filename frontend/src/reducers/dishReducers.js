@@ -22,8 +22,7 @@ export const dishesReducer = (state = { dishes: [] }, action) => {
                 loading: false,
                 dishes: action.payload.dishes,
                 dishesCount: action.payload.dishesCount,
-                resPerPage: action.payload.resPerPage,
-                filteredDishesCount: action.payload.filteredDishesCount
+                resPerPage: action.payload.resPerPage
             }
         case ALL_DISHES_FAIL:
             return {

@@ -78,11 +78,12 @@ nav {
 }
 
 #login_btn,#view_btn{
-  background-color: rgba(254, 189, 105,0);
+  background-color: rgba(0, 0, 0, 0);
   padding: 0.4rem 2rem 0.4em 0.2rem;
   /* font-family: calibri; */
   /* font-weight:600; */
   font-size: 1.4rem;
+  color: #000000;
 }
 
 #cart{

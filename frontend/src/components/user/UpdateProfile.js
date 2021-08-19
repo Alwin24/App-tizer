@@ -12,7 +12,7 @@ const UpdateProfile = ({ history }) => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [avatar, setAvatar] = useState('')
-    const [avatarPreview, setAvatarPreview] = useState('/images/default_avatar.jpg')
+    const [avatarPreview, setAvatarPreview] = useState('https://res.cloudinary.com/alwin24/image/upload/v1628961197/avatars/default_avatar.jpg')
 
     const alert = useAlert();
     const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const UpdateProfile = ({ history }) => {
         if (user) {
             setName(user.name);
             setEmail(user.email);
-            setAvatarPreview(user.avatarPreview);
+            setAvatarPreview(user.avatar.url);
         }
 
         if (error) {
@@ -47,10 +47,16 @@ const UpdateProfile = ({ history }) => {
     const submitHandler = (e) => {
         e.preventDefault()
 
-        const formData = new FormData();
-        formData.set('name', name);
-        formData.set('email', email);
-        formData.set('avatar', avatar);
+        // const formData = new FormData();
+        // formData.set('name', name);
+        // formData.set('email', email);
+        // formData.set('avatar', avatar);
+
+        let formData = {
+            name: name,
+            email: email,
+            avatar: avatar
+        }
 
         dispatch(updateProfile(formData))
     }
@@ -79,7 +85,7 @@ const UpdateProfile = ({ history }) => {
                         <h1 className="mt-2 mb-5">Update Profile</h1>
 
                         <div className="form-group">
-                            <label htmlFor="email_field">Name</label>
+                            <label htmlFor="name_field">Name</label>
                             <input
                                 type="name"
                                 id="name_field"

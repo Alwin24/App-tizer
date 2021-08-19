@@ -21,10 +21,8 @@ exports.getDishes = catchAsyncErrors(async (req, res, next) => {
 
     const apiFeatures = new APIFeatures(Dish.find(), req.query)
         .search()
-        .filter()
 
     let dishes = await apiFeatures.query
-    let filteredDishesCount = dishes.length
 
     apiFeatures.pagination(resPerPage)
     dishes = await apiFeatures.query;
@@ -33,7 +31,6 @@ exports.getDishes = catchAsyncErrors(async (req, res, next) => {
         success: true,
         dishesCount,
         resPerPage,
-        filteredDishesCount,
         dishes
     })
 

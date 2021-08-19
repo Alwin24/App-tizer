@@ -10,15 +10,11 @@ import {
     CLEAR_ERRORS
 } from '../constants/dishConstants'
 
-export const getDishes = (keyword = '', currentPage = 1, price, cuisine, rating = 0) => async (dispatch) => {
+export const getDishes = (keyword = '', currentPage = 1) => async (dispatch) => {
     try {
         dispatch({ type: ALL_DISHES_REQUEST })
 
-        let Link = `/api/v1/dishes?keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&ratings[gte]=${rating}`
-
-        if (cuisine) {
-            Link = `/api/v1/dishes?keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&cuisine=${cuisine}&ratings[gte]=${rating}`
-        }
+        let Link = `/api/v1/dishes?keyword=${keyword}&page=${currentPage}`
 
         const { data } = await axios.get(Link);
 

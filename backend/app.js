@@ -12,8 +12,8 @@ const errorMiddleware = require('./middlewares/errors');
 if (process.env.NODE_ENV !== 'PRODUCTION') require('dotenv').config({ path: 'backend/config/config.env' });
 // dotenv.config({ path: 'backend/config/config.env' });
 
-app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json({ limit: "40mb" }));
+app.use(express.urlencoded({ limit: "40mb", extended: true }));
 app.use(cookieParser());
 app.use(fileUpload());
 

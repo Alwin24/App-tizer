@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom'
 import { FaGithub, } from 'react-icons/fa'
 import { GrLinkedin, GrInstagram } from 'react-icons/gr'
 
@@ -15,19 +14,19 @@ const Footer = () => {
                     </div>
                     <div className="footer_icons">
                         <div className="col-1">
-                            <a target="_blank" href="https://github.com/Alwin24">
+                            <a target="_blank" rel="noreferrer" href="https://github.com/Alwin24">
                                 <FaGithub color="white" size="2rem" />
                             </a>
                         </div>
 
                         <div className="col-1">
-                            <a target="_blank" href="https://www.linkedin.com/in/alwin-helor-95a165205/">
+                            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/alwin-helor-95a165205/">
                                 <GrLinkedin color="white" size="2rem" />
                             </a>
                         </div>
 
                         <div className="col-1">
-                            <a target="_blank" href="https://www.instagram.com/alwin_helor/">
+                            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/alwin_helor/">
                                 <GrInstagram color="white" size="2rem" />
                             </a>
                         </div>

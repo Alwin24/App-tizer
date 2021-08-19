@@ -48,7 +48,7 @@ const Header = () => {
                     </Link>
                 </div>
                 {user ? (
-                    <div className="col-4 ml-4 dropdown d-inline">
+                    <div className="col-2 ml-2 dropdown d-inline">
                         <Link to="#!" className="btn dropdown-toggle text-white mr-4" type="button" id="dropDownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                             <figure className="avatar avatar-nav">
@@ -78,10 +78,10 @@ const Header = () => {
 
                     </div>
 
-                ) : !loading && <div className="row col-2 ml-4">
-                    <Link to="/login" className="btn" id="login_btn">Login
+                ) : !loading && <div className="row col-2 ml-2">
+                    <a href="/login" className="btn" id="login_btn">Login
                         <BiLogIn color="black" size="40px" />
-                    </Link>
+                    </a>
                 </div>}
 
 
