@@ -1,27 +1,22 @@
 # App-tizer
 
-> Basic food delivery website made using MERN stack
+> Food delivery website made using MERN stack
 
 ### Env Variables
 
 Add the config variables values in the config.env file in backend/config folder. 
 
-### Installing Dependencies (Frontend)
+### Installing Dependencies , Backend and Frontend
 
 ```
-cd frontend
 npm i
-```
-
-### Installing Dependencies (Backend)
-
-```
+cd frontend
 npm i
 ```
 
 ### Seed Database
 
-Use the following command to put some dummy dishes in that database.
+Use the following command to put some dummy data.
 Run it in the root folder.
 
 ```

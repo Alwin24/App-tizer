@@ -2,8 +2,31 @@ const Dish = require('../models/dish');
 const ErrorHandler = require('../utils/errorHandler');
 const catchAsyncErrors = require('../middlewares/catchAsyncErrors');
 const APIFeatures = require('../utils/apiFeatures');
+const cloudinary = require('cloudinary');
 
 exports.newDish = catchAsyncErrors(async (req, res, next) => {
+
+    let images = []
+    if (typeof req.body.images === 'string') {
+        images.push(req.body.images)
+    } else {
+        images = req.body.images
+    }
+
+    let imagesLinks = [];
+
+    for (let i = 0; i < images.length; i++) {
+        const result = await cloudinary.v2.uploader.upload(images[i], {
+            folder: 'dishes'
+        });
+
+        imagesLinks.push({
+            public_id: result.public_id,
+            url: result.secure_url
+        })
+    }
+
+    req.body.images = imagesLinks
     req.body.user = req.user.id;
 
     const dish = await Dish.create(req.body);
@@ -31,6 +54,17 @@ exports.getDishes = catchAsyncErrors(async (req, res, next) => {
         success: true,
         dishesCount,
         resPerPage,
+        dishes
+    })
+
+})
+
+exports.getAdminDishes = catchAsyncErrors(async (req, res, next) => {
+
+    const dishes = await Dish.find();
+
+    res.status(200).json({
+        success: true,
         dishes
     })
 

@@ -43,7 +43,7 @@ body{
 }
 
 nav {
-  background-color: rgba(35, 47, 62,0);
+  background-color: #232f3e00;
   padding: 1rem 1rem;
 }
 
@@ -55,9 +55,9 @@ nav {
   padding-top: 1rem;
 }
 
-.navbar{
-  flex-wrap: nowrap;
-}
+/* .navbar{
+  border-bottom:1px solid #232f3e;
+} */
 
 /* #search_btn {
   background-color: #febd69;
@@ -206,7 +206,7 @@ footer {
   padding: 0.5rem 2rem;
 }
 
-#dish_seller {
+#dish_restaurant {
   color: grey;
   font-size: 0.9rem;
 }
@@ -429,7 +429,7 @@ footer {
 }
 
 .active-step {
-  background: #fa9c23;
+  background: #000000;
   color: #fff;
 }
 
@@ -437,7 +437,7 @@ footer {
   float: left;
   width: 0;
   border-top: 20px solid transparent;
-  border-left: 15px solid #fa9c23;
+  border-left: 15px solid #000000;
   border-bottom: 20px solid transparent;
   margin-left: -1px;
 }
@@ -445,9 +445,9 @@ footer {
 .triangle2-active {
   width: 0;
   float: left;
-  border-top: 20px solid #fa9c23;
-  border-left: 15px solid #fff;
-  border-bottom: 20px solid #fa9c23;
+  border-top: 20px solid #000000;
+  border-left: 15px solid rgba(255, 255, 255, 0);
+  border-bottom: 19px solid #000000;
   margin-right: -1px;
 }
 
@@ -464,8 +464,8 @@ footer {
   width: 0;
   float: left;
   border-top: 20px solid #eeeeee;
-  border-left: 15px solid #fff;
-  border-bottom: 20px solid #eeeeee;
+  border-left: 15px solid rgba(158, 123, 123, 0);
+  border-bottom: 19px solid #eeeeee;
   margin-right: -1px;
 }
 
@@ -522,13 +522,31 @@ footer {
   color: #fa9c23;
 }
 
+/* DashBoard Styles */
+
+.dash-total{
+  background: rgb(83, 83, 83);
+}
+.dash-dishes{
+  background: #2673cc;
+}
+.dash-orders{
+  background: #e7c713;
+}
+.dash-users{
+  background: #1ec44f;
+}
+.dash-out{
+  background: #ff0000;
+}
+
 /* Admin Sidebar */
 
 .sidebar-wrapper {
   display: flex;
   width: 100%;
   align-items: stretch;
-  min-height: 100vh;
+  min-height: 70vh;
   font-weight: normal;
 
   margin-top: 0;
@@ -536,13 +554,16 @@ footer {
   left: 0;
   top: 0;
   z-index: 10;
+  padding:0.5rem 0 0 0.5rem;
 }
 #sidebar {
+  /* padding-left: 0.5rem; */
   min-width: 100%;
   max-width: 100%;
-  background: #232f3e;
-  color: #fff;
+  background:#f0751000;
+  color: rgb(0, 0, 0);
   transition: all 0.3s;
+  border-radius:1rem;
 }
 #sidebar.active {
   margin-left: -250px;
@@ -550,23 +571,25 @@ footer {
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: #232f3e;
+  background: #2373d600;
 }
 #sidebar ul.components {
   padding: 5px 0px;
-  border-bottom: 1px solid #232f3e;
+  border-bottom: 1px solid #232f3e00;
 }
 
 #sidebar ul li a {
   padding: 10px;
   font-size: 1.1em;
   display: block;
-  color: white;
+  color: rgb(0, 0, 0);
+  background: #232f3e00;
   text-decoration: none;
 }
 #sidebar ul li a:hover {
   color: #232f3e;
   background: #fff;
+  border-radius:5px;
 }
 
 #sidebar ul li a i {
@@ -576,7 +599,7 @@ footer {
 #sidebar ul li.active > a,
 a[aria-expanded='true'] {
   color: #fff;
-  background: #232f3e;
+  background: #232f3e00;
 }
 a[data-toggle='collapse'] {
   position: relative;
@@ -654,5 +677,5 @@ ul.CTAs a {
 
 .review_user {
   font-size: 0.8rem;
-  color: grey;
+  color: rgb(0, 0, 0);
 }

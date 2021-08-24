@@ -26,19 +26,19 @@ const Header = () => {
     return (
         <Fragment>
             <nav className="navbar row">
-                <div className="col-3 col-md-3">
+                <div className="col-12 col-md-3">
                     <div className="navbar-brand">
                         <Link to="/">
-                            <img className="img-logo" src="https://res.cloudinary.com/alwin24/image/upload/c_scale,w_242/v1628659465/utilities/bg_removed_ucfeos.png" alt="site logo" />
+                            <img src="https://res.cloudinary.com/alwin24/image/upload/c_scale,w_242/v1628659465/utilities/bg_removed_ucfeos.png" alt="site logo" />
                         </Link>
                     </div>
                 </div>
 
-                <div className="col-5 col-md-5 mt-2 mt-md-0">
+                <div className="col-12 col-md-5 mt-2 mt-md-0">
                     <Route render={({ history }) => <Search history={history} />} />
                 </div>
 
-                <div className="col-1 col-md-2 mt-4 mt-md-0 text-center">
+                <div className="col-6 col-md-2 mt-0 mt-md-0 text-center">
                     <Link to="/cart" style={{ textDecoration: 'none' }} >
                         <span>
                             <FaShoppingCart color="black" size="1.5rem" />
@@ -48,7 +48,7 @@ const Header = () => {
                     </Link>
                 </div>
                 {user ? (
-                    <div className="col-2 ml-2 dropdown d-inline">
+                    <div className="col-6 col-md-2 dropdown d-inline">
                         <Link to="#!" className="btn dropdown-toggle text-white mr-4" type="button" id="dropDownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                             <figure className="avatar avatar-nav">
@@ -66,8 +66,7 @@ const Header = () => {
                             {user && user.role === 'admin' && (
                                 <Link className="dropdown-item" to="/dashboard">Dashboard</Link>
                             )}
-                            <Link className="dropdown-item" to="/">Orders</Link>
-                            {/* <Link className="dropdown-item" to="/orders/me">Orders</Link> */}
+                            <Link className="dropdown-item" to="/orders/me">Orders</Link>
                             <Link className="dropdown-item" to="/me">Profile</Link>
                             <Link className="dropdown-item text-danger" to="/" onClick={logoutHandler}>
                                 Logout
@@ -78,14 +77,12 @@ const Header = () => {
 
                     </div>
 
-                ) : !loading && <div className="row col-2 ml-2">
-                    <a href="/login" className="btn" id="login_btn">Login
-                        <BiLogIn color="black" size="40px" />
-                    </a>
-                </div>}
+                ) : !loading &&
+                <Link to="/login" className="btn col-6 col-md-2 text-center" id="login_btn">Login
+                    <BiLogIn color="black" size="40px" />
+                </Link>
+                }
 
-
-                {/* </div> */}
             </nav>
         </Fragment>
     )

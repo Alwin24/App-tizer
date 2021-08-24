@@ -3,6 +3,7 @@ const router = express.Router();
 
 const {
     getDishes,
+    getAdminDishes,
     newDish,
     getSingleDish,
     updateDish,
@@ -15,6 +16,7 @@ const {
 const { isAuthenticatedUser, authorizeRoles } = require('../middlewares/auth');
 
 router.route('/dishes').get(getDishes);
+router.route('/admin/dishes').get(getAdminDishes);
 
 router.route('/admin/dish/new').post(isAuthenticatedUser, authorizeRoles('admin'), newDish);
 
