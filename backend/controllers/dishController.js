@@ -82,31 +82,77 @@ exports.getSingleDish = catchAsyncErrors(async (req, res, next) => {
 })
 
 exports.updateDish = catchAsyncErrors(async (req, res, next) => {
+
     let dish = await Dish.findById(req.params.id);
+
     if (!dish) {
         return next(new ErrorHandler('Dish not found', 404));
     }
+
+    let images = []
+    if (typeof req.body.images === 'string') {
+        images.push(req.body.images)
+    } else {
+        images = req.body.images
+    }
+
+    if (images !== undefined) {
+
+        // Deleting images associated with the dish
+        for (let i = 0; i < dish.images.length; i++) {
+            const result = await cloudinary.v2.uploader.destroy(dish.images[i].public_id)
+        }
+
+        let imagesLinks = [];
+
+        for (let i = 0; i < images.length; i++) {
+            const result = await cloudinary.v2.uploader.upload(images[i], {
+                folder: 'dishes'
+            });
+
+            imagesLinks.push({
+                public_id: result.public_id,
+                url: result.secure_url
+            })
+        }
+
+        req.body.images = imagesLinks
+
+    }
+
     dish = await Dish.findByIdAndUpdate(req.params.id, req.body, {
         new: true,
         runValidators: true,
         useFindAndModify: false
     });
+
     res.status(200).json({
         success: true,
         dish
     })
+
 })
 
 exports.deleteDish = catchAsyncErrors(async (req, res, next) => {
-    let dish = await Dish.findById(req.params.id);
+
+    const dish = await Dish.findById(req.params.id);
+
     if (!dish) {
         return next(new ErrorHandler('Dish not found', 404));
     }
-    await Dish.findByIdAndDelete(req.params.id);
+
+    // Deleting images associated with the dish
+    for (let i = 0; i < dish.images.length; i++) {
+        const result = await cloudinary.v2.uploader.destroy(dish.images[i].public_id)
+    }
+
+    await dish.remove();
+
     res.status(200).json({
         success: true,
-        message: "Dish deleted"
+        message: 'Dish is deleted.'
     })
+
 })
 
 exports.createDishReview = catchAsyncErrors(async (req, res, next) => {
