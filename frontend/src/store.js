@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import logger from 'redux-logger';
+// import logger from 'redux-logger';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { dishesReducer, dishDetailsReducer, newReviewReducer, dishReducer, newDishReducer, reviewReducer, dishReviewsReducer } from './reducers/dishReducers';
@@ -40,7 +40,7 @@ let initalState = {
     }
 }
 
-const middleware = [thunk, logger];
+const middleware = [thunk];
 const store = createStore(reducer, initalState, composeWithDevTools(applyMiddleware(...middleware)));
 
 export default store;
